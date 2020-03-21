@@ -20,8 +20,9 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 
 import "./Topbar.css";
-import { Box, InputAdornment } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import StyledIconButton from '../Icons/StyledIconButton';
+import Searchbar from '../Searchbar/Searchbar'
 
 class Topbar extends React.Component {
 
@@ -32,28 +33,17 @@ class Topbar extends React.Component {
 
   render () {
     let homeOutlinedIcon = <HomeOutlinedIcon/>;
-    let searchIcon = <SearchIcon/>;
 
     return <div className="appBar">
     <AppBar position="static" color="transparent">
       <Toolbar>
         <Box width="100%" alignItems="center" justifyContent="center">
-          <Box display="flex" alignItems="center" justifyContent="center" margin="auto" width="50%">
+          <Box display="flex" alignItems="center" justifyContent="center" margin="auto" width="75%">
             <Box flexGrow={2} justifyContent="flex-start">
               <img className="logo-img" src={textLogo} alt="text logo"/>
             </Box>
             <Box className="tools" flexGrow={3} display="flex" alignItems="center" justifyContent="center">
-              <Box className="search-bar" display="flex" alignItems="center" justifyContent="center" borderRadius={10}>
-                <Box display="flex" alignItems="center" justifyContent="center" margin="5px">
-                  <InputAdornment position="start">
-                    <IconButton>
-                      {searchIcon}
-                    </IconButton>
-                  </InputAdornment>
-                  <InputBase placeholder="Search" icon>
-                  </InputBase>
-                </Box>
-              </Box>
+              <Searchbar></Searchbar>
             </Box>
             <Box display="flex" flexGrow={1} alignItems="center" justifyContent="space-evenly" flexWrap="nowrap">
               {this.renderTopIcons}
@@ -62,7 +52,7 @@ class Topbar extends React.Component {
         </Box>
       </Toolbar>
     </AppBar>
-    <Box className="gallery" alignItems="center" justifyContent="center">
+    {/* <Box className="gallery" alignItems="center" justifyContent="center">
       <Box display="flex" alignItems="center" justifyContent="center" margin="auto" width="50%"  border="solid">
         <Box flexGrow={1} justifyContent="flex-start" alignItems="flex-start">
           <AccountCircleOutlinedIcon height="150px" width="150px"/>
@@ -71,7 +61,7 @@ class Topbar extends React.Component {
                 <img className="logo-img" src={textLogo} alt="text logo"/>
         </Box>
       </Box>
-    </Box>
+    </Box> */}
     </div>
   }
 }

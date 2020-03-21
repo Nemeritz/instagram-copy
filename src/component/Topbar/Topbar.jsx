@@ -38,7 +38,7 @@ class Topbar extends React.Component {
     <AppBar position="static" color="transparent">
       <Toolbar>
         <Box width="100%" alignItems="center" justifyContent="center">
-          <Box display="flex" alignItems="center" justifyContent="center" margin="auto" width="75%">
+          <Box display="flex" alignItems="center" justifyContent="center" margin="auto">
             <Box flexGrow={2} justifyContent="flex-start">
               <img className="logo-img" src={textLogo} alt="text logo"/>
             </Box>
